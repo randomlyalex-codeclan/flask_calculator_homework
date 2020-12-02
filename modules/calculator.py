@@ -1,13 +1,13 @@
 class Calculator():
     
-    def add():
-        pass
+    def add(self, number_1, number_2):
+        return number_1 + number_2
 
-    def subtract():
-        pass
+    def subtract(self, number_1, number_2):
+        return number_1 - number_2
 
-    def multiply():
-        pass
+    def multiply(self, number_1, number_2):
+        return number_1 * number_2
 
-    def divide():
-        pass
+    def divide(self, number_1, number_2):
+        return number_1 / number_2
