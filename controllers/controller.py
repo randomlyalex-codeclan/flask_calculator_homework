@@ -1,18 +1,23 @@
 from app import app
-from modules import calculator
+from modules.calculator import Calculator
 
 @app.route('/')
 def index():
-    return "Hello, World"
+    return "Please use the url bar to either add, divde, subtract or divde two numbers separated by a /"
 
-# @app.route('/<name>')
-# def greet(name):
-#     return f"Hello, {name}"
+@app.route('/add/<number_1>/<number_2>')
+def add(number_1, number_2):
+    return str(Calculator.add_two_numbers(number_1, number_2))
 
-# @app.route('/news')
-# def news():
-#     return "Here is the news"
 
-# @app.route('/data/<name>/<age>')
-# def data(name, age):
-#     return f"Name is {name} is {int(age) + 1} years old"
+@app.route('/subtract/<number_1>/<number_2>')
+def subtract(number_1, number_2):
+    return str(Calculator.subtract_two_numbers(number_1, number_2))
+
+@app.route('/divide/<number_1>/<number_2>')
+def multiply(number_1, number_2):
+    return str(Calculator.multiply_two_numbers(number_1, number_2))
+
+@app.route('/multiply/<number_1>/<number_2>')
+def divide(number_1, number_2):
+    return str(Calculator.divide_two_numbers(number_1, number_2))
